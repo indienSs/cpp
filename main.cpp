@@ -1,7 +1,9 @@
 #include <iostream>
+#include "./headers/arythmetic.hpp"
 
 int main() {
-    std::cout << "hello\n";
+    double index = bodyWeightIndex(184, 80);
+    std::cout << index << "\n";
     std::cin.get();
     return 0;
 }

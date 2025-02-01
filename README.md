@@ -1,2 +1,3 @@
-Test cpp possibilities
+cpp possibilities
 gcc options
+cmake building
