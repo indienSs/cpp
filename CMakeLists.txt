@@ -1,11 +1,10 @@
-cmake_minimum_required(VERSION 2.8)
+# cmake_minimum_required(VERSION 3.0)
+# project(cpp_test)
 
-project(cpp_test)
-
-# add_subdirectory(src)
-# add_subdirectory(headers)
-
-# set(SOURCE main.cpp arythmetic.cpp)
-# set(HEADER arythmetic.hpp)
+# set(SOURCE
+#         main.cpp
+#         /src/arythmetic.cpp
+#         /headers/arythmetic.hpp
+#     )
 
 # add_executable(main ${SOURCE})
