@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdint>
 
 unsigned int packCharacters() {
     unsigned int res{};
@@ -23,6 +22,14 @@ unsigned int packCharacters() {
     return res;
 }
 
-unsigned int unpackCharacters() {
-    return 0;
+std::string unpackCharacters(unsigned int packed) {
+    unsigned int mask{0xFF};
+    std::string res = "";
+
+    res += static_cast<char>((packed >> 24) & mask);
+    res += static_cast<char>((packed >> 16) & mask);
+    res += static_cast<char>((packed >> 8) & mask);
+    res += static_cast<char>(packed & mask);
+
+    return res;
 }

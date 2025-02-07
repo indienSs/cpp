@@ -1,7 +1,10 @@
 .vscode/
+build/
+out/
 
 *.exe
 
-build/
+
 CMakeCache.txt
 CMakeFiles
+CMakePresets.json
