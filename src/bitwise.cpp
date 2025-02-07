@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 
 unsigned int packCharacters() {
     unsigned int res{};
@@ -24,12 +25,12 @@ unsigned int packCharacters() {
 
 std::string unpackCharacters(unsigned int packed) {
     unsigned int mask{0xFF};
-    std::string res = "";
+    std::stringstream res;
 
-    res += static_cast<char>((packed >> 24) & mask);
-    res += static_cast<char>((packed >> 16) & mask);
-    res += static_cast<char>((packed >> 8) & mask);
-    res += static_cast<char>(packed & mask);
+    res << static_cast<char>((packed >> 24) & mask);
+    res << static_cast<char>((packed >> 16) & mask);
+    res << static_cast<char>((packed >> 8) & mask);
+    res << static_cast<char>(packed & mask);
 
-    return res;
+    return res.str();
 }
