@@ -1,5 +1,5 @@
 #include <iostream>
-#include "./headers/bitwise.hpp"
+#include "bitwise.hpp"
 
 int main() {
     auto bitwise = packCharacters();
