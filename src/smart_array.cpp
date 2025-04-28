@@ -1,3 +1,5 @@
+#include <algorithm>
+
 template <typename T>
 class SmartArray {
 public:
@@ -40,6 +42,6 @@ public:
 
 private:
     T* arr_{};
-    int size_{0};
+    int size_{};
     int capacity_{};
 };
