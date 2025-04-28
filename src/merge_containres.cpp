@@ -18,7 +18,7 @@ std::vector<T> mergeContainers(std::span<T> f, std::span<T> s) {
     std::sort(
         res.begin(),
         res.end(),
-        [](T& a, T& b) -> const bool { return a < b; }
+        [](const T& a, const T& b) -> const bool { return a < b; }
     );
 
     return res;

@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <utility>
 
 template <typename T>
 class SmartArray {
@@ -18,18 +19,18 @@ public:
         return *this;
     }
 
-    void push_back(T el) {
+    void push_back(T&& el) {
         if (size_ == capacity_) {
             resize();
         }
-        arr[size_++] = el;
+        arr[size_++] = std::forward<T>(el);
     }
     void pop_back() {
         if (size_ > 0) {
             --size_;
         }
     }
-    int size() const { return size_ - 1; }
+    int size() const { return size_ + 1; }
     int capacity() const { return capacity_; }
     T& operator[](int pos) const { return arr_[pos]; }
     void resize() {
